@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width = device-width, initial scale = 1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/mainpage.css">
+<%= stylesheet_link_tag "bootstrap.css" %>
+<%= stylesheet_link_tag "mainpage.css" %>
+	<title>Gerbag Industrial Technologies Philippines</title>
+</head>
+<body>
+<div class="container">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img id="logo" alt="Brand" src="#">
+	      </a>
+		<ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Hi, User</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+	      </ul>
+	  </div>
+	 </nav>
+	
+</div>
+<!--sidebar-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2 col-md-2 ">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                </span>Customer</a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="#">Clients</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="#">Quotation</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Invoice</a></li>
+				
+			   <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Sales</a></li>
+             
+
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFour"><span class="glyphicon glyphicon-file">
+                </span>Supplier</a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="list-group">
+              <a href="#" class="list-group-item">Quotation</a>
+              <a href="#" class="list-group-item">Purchase</a>
+              <a href="#" class="list-group-item">Bills</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFive"><span class="glyphicon glyphicon-heart">
+                </span>Reports</a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapse">
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Manage Customers</h3>
+        </div>
+        <div class="panel-body" style="height: 100%; ">
+			
+			
+        </div>
+        		<!--Panel Table-->
+				<div class="table-responsive pre-scrollable" style="height: 100;">
+				<table class="table table-bordered table-hover table-condensed">
+					<tr>
+								
+								<th>Company Name</th>
+								<th>Location</th>
+								<th>Contact Person</th>
+								<th>Contact Number</th>
+								<th>Email Address</th>
+							</tr>
+				<% if Customer.all.each do |customer| %>
+				<tr>
+					<td><%= customer.CustomerName %></td>
+					<td><%= customer.MailingAddress %></td>
+					<td><%= customer.ContactPerson %></td>
+					<td><%= customer.ContactNumber %></td>
+				</tr>
+				<% end %>
+				<% end %>
+							
+
+					
+						</table>
+					</div>
+			
+				<!--EndPanel Table-->
+    <div class="panel-footer">
+	        <div class="col-md-2 col-sm-4 col-xs-12">
+	        	<a class="btn btn-primary center-block" data-toggle="modal" data-target="#mymodal">Add New Customer</a>
+		        	<div class="modal fade" id="mymodal" tabIndex="-1" role="dialog" aria-hidden="true">
+		        		<div class="modal-dialog">
+		        			<div class="modal-content">
+			        			<div class="modal-header">
+			        			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        				<h1>Add New Customer</h1>
+			        			</div>
+			        			<div class="modal-body">
+			        				<div class="container-fluid">
+										 
+										  <form class="form-horizontal" role="form">
+										    <div class="form-group">
+										      <label class="control-label">Account #:</label>
+										   
+										        <!--<p class="form-control-static">A63NTX44</p><Customerid-->
+										     
+										    </div>
+										 
+										    <div class="form-group">
+										    	 <%= form_for Customer.new do |f| %>
+										      <label class="control-label  ">Company Name:</label>
+										      <div class="">          
+										        <%=f.text_field :CustomerName%>
+										      </div>
+										    </div>
+										    	<div class="form-group">
+										    		<label class="control-label">Company Location:</label>
+										    		<div class="">  
+										    		<%=f.text_field :MailingAddress%>
+										    	</div>
+										    	</div>
+										    	<div class="form-group">
+										    		<label class="control-label">Contact Person:</label>
+										    		<div class="">  
+										    		<%=f.text_field :ContactPerson%>
+										    	</div>
+										    	</div>
+										    	<div class="form-group">
+										    		<label class="control-label">Contact Number</label>
+										    		<div class="">  
+										    		<%=f.telephone_field :ContactNumber%>
+										    	</div>
+										    	</div>
+										    	<div class="form-group">
+										    		<label class="control-label">Email Address:</label>
+										    		<input type="text" class="form-control">
+										    	</div>
+												<div class="modal-footer">
+			        							<div class="form-group">        
+										      <div class="col-sm-offset-2 col-sm-10">
+										        <%= f.submit%>
+										        	<%end%>
+										      </div>
+										    </div>
+			        			</div>
+										    
+										  </form>
+										</div>
+
+			        			</div>
+			        			
+		        				
+		        			</div>
+		        		</div>
+		        	</div>
+	        </div>
+        
+	         <div class="col-md-2 col-sm-4 col-xs-12">
+	         	<a class="btn btn-warning center-block">Update Customer</a>
+	         </div>
+         <!--Search-->
+
+			<div class="container-fluid">
+    <div class="row">    
+        <div class="col-md-4 col-sm-4 col-xs-12">
+		    <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    	<span id="search_concept">Filter by</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#contains">Customer ID</a></li>
+                      <li><a href="#its_equal">Customer Name</a></li>
+                      <li><a href="#greather_than">Greather than ></a></li>
+                      <li><a href="#less_than">Less than < </a></li>
+                      <li class="divider"></li>
+                      <li><a href="#all">Anything</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">         
+                <input type="text" class="form-control" name="x" placeholder="Search Customer..">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </div>
+	</div>
+    </div>
+
+         <!--end of Search-->
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end of sidebar-->
+
+	<footer class="footer">
+		<div class="container">
+			<p>Gerbag Industrial Technologies Philippines 2016.</p>
+		</div>
+	</footer>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
