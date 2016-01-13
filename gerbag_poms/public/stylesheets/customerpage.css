@@ -13,3 +13,10 @@ body { padding-top: 100px; }
   background: green;
 
 }
+a:active{
+	color: red;
+}
+table.dataTable.select tbody tr,
+table.dataTable thead th:first-child {
+  cursor: pointer;
+}
