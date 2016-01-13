@@ -1,0 +1,480 @@
+<!DOCTYPE html>   
+<html lass="no-js" lang="en">   
+<head>   
+<meta charset="UTF-8">   
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width = device-width, initial scale = 1">
+<title>Customer-Gerbag</title>   
+<!--
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"></style>
+<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css"></style>
+
+
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="js/dataTables.select..min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/customerpage.css">
+<link rel="stylesheet" type="text/css" href="css/buttons.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/select.bootstrap.min.css">
+
+<script type="text/javascript" src="js/customerpage.js"></script>
+<script type="text/javascript" src="js/buttons.print.min.js"></script>
+
+
+</head>  
+<body>  
+<!--Navigation-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        Gerbag
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Hello, Master Gab</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Manange Other Accounts</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        
+      </div>
+      <div class="jumbotron">
+      <div class="container" style="text-align: center;">
+        <h1>Hello, Master Bag!</h1>
+        <p>Ready to get rich?</p>
+      </div>
+    </div>
+<!--End of Navigation-->
+
+<!--sidebar-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2 col-md-2 ">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                </span>Customer</a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="CustomerPage.html">Clients</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="#">Quotation</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Invoice</a></li>
+        
+         <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Sales</a></li>
+             
+
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFour"><span class="glyphicon glyphicon-file">
+                </span>Supplier</a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="list-group">
+              <a href="#" class="list-group-item">Quotation</a>
+              <a href="#" class="list-group-item">Purchase</a>
+              <a href="#" class="list-group-item">Bills</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFive"><span class="glyphicon glyphicon-heart">
+                </span>Reports</a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapse">
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Manage your Customers</h3>
+        </div>
+        <div class="panel-body" style="height: 100%; ">
+         <!--Table Start TABLE TABLE TABLE TABLE-->    
+              <div class="container-fluid" >
+            <div class="table-responsive" style="height: 100;">
+                 
+                        <table id="myTable" class=" display select table table-hover table-stripped table-condensed" cellspacing="0" width="100%">
+                          <thead>
+                          <tr>
+                            <th><input name="select_all" value="1" type="checkbox"></th>
+                            <th>ID</th>
+                            <th>Company Name</th>
+                            <th>Mailing Address</th>
+                            <th>Contact Person</th>
+                            <th>Contact Number</th>
+                            <th>Email Address</th>
+                            <td></td>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                           <td></td>
+                            <td>1</td>
+                            <td>Heaven's Door</td>
+                            <td>Makati</td>
+                            <td>Mylene Ramirez</td> 
+                            <td>0844 493 0787 </td>
+                            <td>Mylene@yahoo.com</td>
+                            <td class="display select">
+                                <div>
+            <a class="btn btn-warning center-block" data-toggle="modal" data-target="#editmodal">Edit</a>
+              <div class="modal fade" id="editmodal" tabIndex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h1 style="text-align: center;">Update</h1>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid">
+                     
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label class="control-label">ID:</label>
+                       
+                            <p class="form-control-static">1</p><!--Customerid-->
+                         
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label  ">Company Name:</label>
+                          <div class="">          
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                          <div class="form-group">
+                            <label class="control-label">Company Location:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Contact Person:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Contact Number</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Email Address</label>
+                            <input type="text" class="form-control">
+                          </div>
+
+                        
+                      </form>
+            </div>
+
+    </div>
+  
+        <!-- TABLE END -->
+   
+                    <div class="modal-footer">
+                      <div class="form-group">        
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                          </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+        
+                            </td>
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>2</td>
+                            <td>Heaven's Bay</td>
+                            <td>North Carolina</td>
+                            <td>Chot Jimenez</td>
+                            <td>0845 493 0654 </td> 
+                            <td>chotj@gmail.com</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>3</td>
+                            <td>Walang Tulugan</td>
+                            <td>Palawan</td>
+                            <td>Kuya Germs</td> 
+                            <td>0934 413 0728 </td>
+                            <td>natulog@yahoo.com</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>4</td>
+                            <td>Sogo Machinery</td>
+                            <td>Guadalupe</td>
+                            <td>Gideon Flores</td>  
+                            <td>0912 413 0787 </td>
+                            <td>gf@yahoo.com</td>
+                            <td></td>
+                            
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>5</td>
+                            <td>Deew Plantation</td>
+                            <td>Abra</td>
+                            <td>Ralph Pagayon</td>  
+                            <td>0544 123 0723 </td>
+                            <td>ralphy@yahoo.com</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                          <td></td>
+                            <td>6</td>
+                            <td>Bible Page Maker</td>
+                            <td>Cavite</td>
+                            <td>Joseph Encounter</td> 
+                            <td>0844 493 0787 </td>
+                            <td>Encounter@yahoo.com</td>
+                            <td></td>
+                            
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>7</td>
+                            <td>ShotGeeks</td>
+                            <td>Palawan</td>
+                            <td>Ernesto Alayon</td> 
+                            <td>0644 493 0797 </td>
+                            <td>Ron@shotgeeks.com</td>
+                            <td></td>
+                            
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>8</td>
+                            <td>Nubahs Agord Laboratory</td>
+                            <td>Nueva Ecija</td>
+                            <td>Jeffrey Ubahs</td>  
+                            <td>0874 493 0767 </td>
+                            <td>Ubahsan@gmail.com</td>
+                          <td></td>
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>9</td>
+                            <td>Precious</td>
+                            <td>Cavite</td>
+                            <td>Elibert Precious</td> 
+                            <td>0922 413 0787 </td>
+                            <td>Precious@yahoo.com</td>
+                            <td></td>
+                          
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>10</td>
+                            <td>Gerbanks</td>
+                            <td>Lower Bicutan</td>
+                            <td>John Gabriel Bagacina</td>
+                            <td>0966 493 0787 </td> 
+                            <td>jgabagacina@gmail.com</td>
+                            <td></td>
+                            
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>11</td>
+                            <td>Rusty Metals</td>
+                            <td>Upper Bicutan</td>
+                            <td>Mineheart Liad</td> 
+                            <td>0344 493 0287 </td>
+                            <td>endeavor@rustymetals.com</td>
+                            <td></td>
+                            
+                          </tr>
+                          <tr>
+                           <td></td>
+                            <td>12</td>
+                            <td>Bald Razor Parts</td>
+                            <td>PAE</td>
+                            <td>Prince Kenneth B. Rufino</td> 
+                            <td>0903 493 0789 </td>
+                            <td>pkfurion@yahoo.com</td>
+                            <td></td>
+                          </tr>
+                          </tbody>
+
+                      
+                        </table>
+              </div>
+
+    <div class="panel-footer">
+    <!--ADD NEW CUSTOMER -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <a class="btn btn-primary center-block" data-toggle="modal" data-target="#mymodal">Add New Customer</a>
+              <div class="modal fade" id="mymodal" tabIndex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h1 style="text-align: center;">Add New Customer</h1>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid">
+                     
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label class="control-label">Account #:</label>
+                       
+                            <p class="form-control-static">A63NTX44</p><!--Customerid-->
+                         
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label  ">Company Name:</label>
+                          <div class="">          
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                          <div class="form-group">
+                            <label class="control-label">Company Location:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Contact Person:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Contact Number</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label">Email Address</label>
+                            <input type="text" class="form-control">
+                          </div>
+
+                        
+                      </form>
+            </div>
+
+    </div>
+  
+        <!-- TABLE END -->
+   
+                    <div class="modal-footer">
+                      <div class="form-group">        
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                          </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+            <a class="btn btn-danger center-block" data-toggle="modal" data-target="#deletemodal">Delete</a>
+              <div class="modal fade" id="deletemodal" tabIndex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h1 style="text-align: center;">Delete Customer?</h1>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid">
+                     
+                     Are you sure you want to delete customer?
+            </div>
+
+    </div>
+  
+       
+   
+                    <div class="modal-footer">
+                      <div class="form-group">        
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-danger">Confirm</button>
+                          </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+        <!-- -->
+        </div>
+          
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<footer>
+        <p>Gerbag Industrial Technologies 2016 (c)</p>
+      </footer>
+  </div>
+<!--end of sidebar-->
+</body>  
+</html>  
