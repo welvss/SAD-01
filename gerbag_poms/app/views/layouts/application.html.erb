@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerbag Industrial Technology Philippines</title>
+  
+  <%= csrf_meta_tags %>
+  <!--Stylesheets-->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "bootstrap.min.css" %>
+  <%= stylesheet_link_tag "customerpage.css" %>
+  <%= stylesheet_link_tag "buttons.bootstrap.css" %>
+  <%= stylesheet_link_tag "select.bootstrap.min.css" %>
+  <%= stylesheet_link_tag "jquery.dataTables.min.css" %>
+  <%= stylesheet_link_tag "dataTables.bootstrap.min.css" %>
+  <!--Stylesheets end-->
+  <!--Javascripts-->
+  <%= javascript_include_tag 'defaults', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "jquery-2.2.0.min.js" %>
+  <%= javascript_include_tag "bootstrap.min.js" %>
+  <%= javascript_include_tag "jquery.dataTables.min.js" %>
+  <%= javascript_include_tag "dataTables.select..min.js" %>
+  <%= javascript_include_tag "customerpage.js"%>
+  <%= javascript_include_tag "buttons.print.min.js" %>
+  
+  <!--Javascripts end-->
+</head>
+<body>  
+<!--Navigation-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        Gerbag
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Hello, Master Gab</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Manange Other Accounts</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        
+      </div>
+      <div class="jumbotron">
+      <div class="container" style="text-align: center;">
+        <h1>Hello, Master Bag!</h1>
+        <p>Ready to get rich?</p>
+      </div>
+    </div>
+<!--End of Navigation-->
+
+<!--sidebar-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2 col-md-2 ">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                </span>Customer</a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="CustomerPage.html">Clients</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="#">Quotation</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Invoice</a></li>
+        
+         <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Sales</a></li>
+             
+
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFour"><span class="glyphicon glyphicon-file">
+                </span>Supplier</a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="list-group">
+              <a href="#" class="list-group-item">Quotation</a>
+              <a href="#" class="list-group-item">Purchase</a>
+              <a href="#" class="list-group-item">Bills</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFive"><span class="glyphicon glyphicon-heart">
+                </span>Reports</a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapse">
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+
+
+   <%= yield %>
+
+
+
+<div class="container">
+<footer>
+        <p>Gerbag Industrial Technologies 2016 (c)</p>
+      </footer>
+  </div>
+<!--end of sidebar-->
+</body>  
+</html>
