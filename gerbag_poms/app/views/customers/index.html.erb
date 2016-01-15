@@ -20,7 +20,7 @@
                           </tr>
                           </thead>
                           <tbody>
-                          <%= Customer.all.each do |customer|%>
+                          <% Customer.all.each do |customer|%>
                           <tr>
                            
                             <td><%= customer.CustomerName %></td>
@@ -51,7 +51,7 @@
                         <div class="form-group">
                           <label class="control-label">ID:</label>
                        
-                            <p class="form-control-static"><%=Customer.last.CustomerID+1%></p><!--Customerid-->
+                            <p class="form-control-static"></p><!--Customerid-->
                          
                         </div>
                         <div class="form-group">
@@ -124,7 +124,8 @@
                     <div class="modal-footer">
                       <div class="form-group">        
                           <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-danger">Confirm</button>
+                           
+                            <%= button_to "Confirm",customer, method: :delete, class: "btn btn-danger"%>
                           </div>
                         </div>
                     </div>
@@ -165,7 +166,7 @@
                         <div class="form-group">
                           <label class="control-label">ID:</label>
                        
-                            <p class="form-control-static"><%=Customer.last.CustomerID+1%></p><!--Customerid-->
+                            <p class="form-control-static"><</p><!--Customerid-->
                          
                         </div>
                         <div class="form-group">
