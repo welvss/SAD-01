@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "ContactPerson",  limit: 100
     t.string "ContactNumber",  limit: 45
     t.text   "MailingAddress", limit: 2147483647
+    t.string "EmailAddress",   limit: 45
   end
 
   create_table "formalquotationcustomer", primary_key: "GITPID", force: true do |t|
@@ -102,10 +103,11 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "quotationsupplier", ["SupplierID"], name: "SupplierID_idx", using: :btree
 
   create_table "suppliers", primary_key: "SupplierID", force: true do |t|
-    t.string "SupplierName",   limit: 100,        null: false
-    t.string "ContactPerson",  limit: 100,        null: false
-    t.string "ContactNumber",  limit: 45,         null: false
-    t.text   "MailingAddress", limit: 2147483647, null: false
+    t.string "SupplierName",   limit: 100
+    t.string "ContactPerson",  limit: 100
+    t.string "ContactNumber",  limit: 45
+    t.text   "MailingAddress", limit: 2147483647
+    t.string "EmailAddress",   limit: 45
   end
 
 end
