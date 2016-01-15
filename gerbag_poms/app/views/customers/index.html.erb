@@ -20,7 +20,7 @@
                           </tr>
                           </thead>
                           <tbody>
-                          <% Customer.all.each do |customer|%>
+                          <% @customers.all.each do |customer|%>
                           <tr>
                            
                             <td><%= customer.CustomerName %></td>
@@ -34,7 +34,8 @@
                          
                                 <div>
                           
-            <a class="btn btn-warning center-block" data-toggle="modal" data-target="#editmodal">Edit</a>
+           <%=link_to '<a class="btn btn-warning center-block" data-toggle="modal" data-target="#editmodal">Edit</a>'.html_safe,customer%>
+            
               <div class="modal fade" id="editmodal" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -47,7 +48,7 @@
                       <div class="container-fluid">
                      
                      <form class="form-horizontal" role="form">
-                        <%= bootstrap_form_for @customer do |f|%>
+                        <%= bootstrap_form_for customer,{method: :put} do |f|%>
                         <div class="form-group">
                           <label class="control-label">ID:</label>
                        
@@ -101,35 +102,8 @@
                             
                             </td>
                             <td class="display select">
-                               <div >
-            <a class="btn btn-danger center-block" data-toggle="modal" data-target="#deletemodal">Delete</a>
-              <div class="modal fade" id="deletemodal" tabIndex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h1 style="text-align: center;">Delete Customer?</h1>
-                    </div>
-                    <div class="modal-body">
-                      <div class="container-fluid">
-                     
-                     Are you sure you want to delete customer?
-            </div>
-
+            <%= button_to "Delete",customer, method: :delete, class: "btn btn-danger"%>
     </div>
-  
-       
-   
-                    <div class="modal-footer">
-                      <div class="form-group">        
-                          <div class="col-sm-offset-2 col-sm-10">
-                           
-                            <%= button_to "Confirm",customer, method: :delete, class: "btn btn-danger"%>
-                          </div>
-                        </div>
-                    </div>
-                    
                   </div>
                 </div>
                 <%end%>

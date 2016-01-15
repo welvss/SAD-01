@@ -1,0 +1,45 @@
+<h1 style="text-align: center;">Update</h1>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid">
+                     
+                     <form class="form-horizontal" role="form">
+                        <%= bootstrap_form_for @customer do |f|%>
+                        <div class="form-group">
+                          <label class="control-label">ID:</label>
+                       
+                            <p class="form-control-static"></p><!--Customerid-->
+                         
+                        </div>
+                        <div class="form-group">
+                          
+                          <div class="">          
+                            <%= f.text_field :CustomerName, label:"Company Name:", label_class: "control-label"%>
+                          </div>
+                        </div>
+                          <div class="form-group">
+                           
+                            <%= f.text_field :MailingAddress, label:"Company Location:" ,label_class: "control-label"%>
+                          </div>
+                          <div class="form-group">
+                           
+                            <%= f.text_field :ContactPerson, label:"Contact Person:", label_class: "control-label"%>
+                          </div>
+                          <div class="form-group">
+                           
+                            <%= f.text_field :ContactNumber, label:"Contact Number:", label_class: "control-label"%>
+                          </div>
+                          <div class="form-group">
+                          
+                            <%= f.text_field :EmailAddress, label:"Email Address:", label_class: "control-label"%>
+                            
+                          </div>
+      <div class="modal-footer">
+                      <div class="form-group">        
+                          <div class="col-sm-offset-2 col-sm-10">
+                             <%= f.submit "Submit", class: "btn btn-success"%>
+                            <%end%>
+                                </div>
+                        </div>
+                    </div>
+                      </form>
