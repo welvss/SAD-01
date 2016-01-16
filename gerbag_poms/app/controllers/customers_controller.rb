@@ -30,8 +30,8 @@ class CustomersController < ApplicationController
 
 	
 	def update
-		 @customer.update(customer_params)
-		 @customer.save
+		 @customer.update_attributes(customer_params)
+		
 	
 		redirect_to customers_path
 		

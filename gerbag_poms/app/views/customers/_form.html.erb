@@ -2,9 +2,9 @@
                     </div>
                     <div class="modal-body">
                       <div class="container-fluid">
-                     
+                     <%= bootstrap_form_for @customer do |f|%>
                      <form class="form-horizontal" role="form">
-                        <%= bootstrap_form_for @customer do |f|%>
+                        
                         <div class="form-group">
                           <label class="control-label">ID:</label>
                        
@@ -34,11 +34,12 @@
                             <%= f.text_field :EmailAddress, label:"Email Address:", label_class: "control-label"%>
                             
                           </div>
+                          <%= f.submit "Submit", class: "btn btn-success"%>
+                            <%end%>
       <div class="modal-footer">
                       <div class="form-group">        
                           <div class="col-sm-offset-2 col-sm-10">
-                             <%= f.submit "Submit", class: "btn btn-success"%>
-                            <%end%>
+                             
                                 </div>
                         </div>
                     </div>
