@@ -4,13 +4,12 @@
 <meta charset="UTF-8">   
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width = device-width, initial scale = 1">
-<title>Customer-Gerbag</title>   
+<title>Quotation-Gerbag</title>   
 <!--
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
 <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"></style>
-<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css"></style>
+
 
 
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
@@ -22,7 +21,7 @@
 <link rel="stylesheet" type="text/css" href="css/buttons.bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/select.bootstrap.min.css">
 
-<script type="text/javascript" src="js/customerpage.js"></script>
+
 <script type="text/javascript" src="js/buttons.print.min.js"></script>
 
 
@@ -89,7 +88,7 @@
             <ul class="list-group">
               <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="CustomerPage.html">Clients</a></li>
 
-              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="quotationcustomer.html">Quotation</a></li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="#">Quotation</a></li>
 
               <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Invoice</a></li>
         
@@ -144,204 +143,24 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
+    <div class="col-sm-12 col-md-10 col-xs-12" style="height: 100%; ">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title">Manage your Customers</h3>
+          <h3 class="panel-title">Quotation</h3>
         </div>
-        <div class="panel-body" style="height: 100%; ">
-         <!--Table Start TABLE TABLE TABLE TABLE-->    
-              <div class="container-fluid" >
-            <div class="table-responsive" style="height: 100;">
-                 
-                        <table id="myTable" class=" display select table table-hover table-stripped table-condensed" cellspacing="0" width="100%">
-                          <thead>
-                          <tr>
-                           
-                            <th>ID</th>
-                            <th>Company Name</th>
-                            <th>Mailing Address</th>
-                            <th>Contact Person</th>
-                            <th>Contact Number</th>
-                            <th>Email Address</th>
-                            <td></td>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                          
-                            <td>1</td>
-                            <td>Heaven's Door</td>
-                            <td>Makati</td>
-                            <td>Mylene Ramirez</td> 
-                            <td>0844 493 0787 </td>
-                            <td>Mylene@yahoo.com</td>
-                            <td class="display select">
-                                <div>
-                                  <a class="btn btn-info center-block" href="viewcustomer.html">View</a>
-                               </div>
-  
-          <div>
-            <a class="btn btn-danger center-block" data-toggle="modal" data-target="#deletemodal">Delete</a>
-              <div class="modal fade" id="deletemodal" tabIndex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h1 style="text-align: center;">Delete Customer?</h1>
-                    </div>
-                    <div class="modal-body">
-                      <div class="container-fluid">
-                     
-                     Are you sure you want to delete customer?
+          <div class="panel-body" style="height: 100%; ">
+            <div class="col-md-10 col-sm-4 col-xs-12">
+              <div class="form-group col-md-8">
+                <label for="sel1">Customer:</label>
+                <select class="form-control" id="sel1">
+                  <option>Choose Customer</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
             </div>
-
-    </div>
-  
-       
-   
-                    <div class="modal-footer">
-                      <div class="form-group">        
-                          <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-danger">Confirm</button>
-                          </div>
-                        </div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-          </div>
-        <!-- Delete End-->
-        
-                            </td>
-                          </tr>
-                          <tr>
-                           
-                            <td>2</td>
-                            <td>Heaven's Bay</td>
-                            <td>North Carolina</td>
-                            <td>Chot Jimenez</td>
-                            <td>0845 493 0654 </td> 
-                            <td>chotj@gmail.com</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                          
-                            <td>3</td>
-                            <td>Walang Tulugan</td>
-                            <td>Palawan</td>
-                            <td>Kuya Germs</td> 
-                            <td>0934 413 0728 </td>
-                            <td>natulog@yahoo.com</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                           
-                            <td>4</td>
-                            <td>Sogo Machinery</td>
-                            <td>Guadalupe</td>
-                            <td>Gideon Flores</td>  
-                            <td>0912 413 0787 </td>
-                            <td>gf@yahoo.com</td>
-                            <td></td>
-                            
-                          </tr>
-                          <tr>
-                          
-                            <td>5</td>
-                            <td>Deew Plantation</td>
-                            <td>Abra</td>
-                            <td>Ralph Pagayon</td>  
-                            <td>0544 123 0723 </td>
-                            <td>ralphy@yahoo.com</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                          
-                            <td>6</td>
-                            <td>Bible Page Maker</td>
-                            <td>Cavite</td>
-                            <td>Joseph Encounter</td> 
-                            <td>0844 493 0787 </td>
-                            <td>Encounter@yahoo.com</td>
-                            <td></td>
-                            
-                          </tr>
-                          <tr>
-                          
-                            <td>7</td>
-                            <td>ShotGeeks</td>
-                            <td>Palawan</td>
-                            <td>Ernesto Alayon</td> 
-                            <td>0644 493 0797 </td>
-                            <td>Ron@shotgeeks.com</td>
-                            <td></td>
-                            
-                          </tr>
-                          <tr>
-                           
-                            <td>8</td>
-                            <td>Nubahs Agord Laboratory</td>
-                            <td>Nueva Ecija</td>
-                            <td>Jeffrey Ubahs</td>  
-                            <td>0874 493 0767 </td>
-                            <td>Ubahsan@gmail.com</td>
-                          <td></td>
-                          </tr>
-                          <tr>
-                           
-                            <td>9</td>
-                            <td>Precious</td>
-                            <td>Cavite</td>
-                            <td>Elibert Precious</td> 
-                            <td>0922 413 0787 </td>
-                            <td>Precious@yahoo.com</td>
-                            <td></td>
-                          
-                          </tr>
-                          <tr>
-                           
-                            <td>10</td>
-                            <td>Gerbanks</td>
-                            <td>Lower Bicutan</td>
-                            <td>John Gabriel Bagacina</td>
-                            <td>0966 493 0787 </td> 
-                            <td>jgabagacina@gmail.com</td>
-                            <td></td>
-                            
-                          </tr>
-                          <tr>
-                          
-                            <td>11</td>
-                            <td>Rusty Metals</td>
-                            <td>Upper Bicutan</td>
-                            <td>Mineheart Liad</td> 
-                            <td>0344 493 0287 </td>
-                            <td>endeavor@rustymetals.com</td>
-                            <td></td>
-                            
-                          </tr>
-                          <tr>
-                           
-                            <td>12</td>
-                            <td>Bald Razor Parts</td>
-                            <td>PAE</td>
-                            <td>Prince Kenneth B. Rufino</td> 
-                            <td>0903 493 0789 </td>
-                            <td>pkfurion@yahoo.com</td>
-                            <td></td>
-                          </tr>
-                          </tbody>
-
-                      
-                        </table>
-              </div>
-
-    <div class="panel-footer">
-    <!--ADD NEW CUSTOMER -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
+                <!-- add-->
+                 <div class="col-md-6">
             <a class="btn btn-primary center-block" data-toggle="modal" data-target="#mymodal">Add New Customer</a>
               <div class="modal fade" id="mymodal" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
@@ -389,8 +208,6 @@
             </div>
 
     </div>
-  
-        <!-- TABLE END -->
    
                     <div class="modal-footer">
                       <div class="form-group">        
@@ -404,8 +221,36 @@
                 </div>
               </div>
           </div>
-                              
-        </div>
+                          <!-- add customer-->
+                          <!--Currency-->
+                  <div class="form-group col-md-8">
+                    <label for="sel1">Currency:</label>
+                    <select class="form-control" id="sel1">
+                      <option>Choose Currency:</option>
+                      <option>Singapore Dollar</option>
+                      <option>Philippine Peso</option>
+                    </select>
+                  </div>
+                          <!-- -->
+                        <div class="panel panel-default col-md-6">
+                            <div class="panel-heading">
+                            <h3 class="panel-title">Quote Header</h3>
+                              <div class="panel-body">
+                                <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">Quote #</span>
+                                  <input type="text" class="form-control" placeholder="GITP 16-420" aria-describedby="basic-addon1">
+                                </div>
+
+                              </div>
+                            </div>
+                        </div>
+                      <!---->
+
+              </div>
+              </div>
+          </div>
+      </div>
+    </div>
           
          </div>
       </div>
@@ -418,5 +263,6 @@
       </footer>
   </div>
 <!--end of sidebar-->
+
 </body>  
 </html>  
