@@ -6,7 +6,7 @@
         <div class="panel-body" style="height: 100%; ">
          <!--Table Start TABLE TABLE TABLE TABLE-->    
               <div class="container-fluid" >
-            <div class="table-responsive" style="height: 100;">
+              <div class="table-responsive" style="height: 100;">
                  
                         <table id="myTable" class=" display select table table-hover table-stripped table-condensed" cellspacing="0" width="100%">
                           <thead>
@@ -16,7 +16,8 @@
                             <th>Contact Person</th>
                             <th>Contact Number</th>
                             <th>Email Address</th>
-                            <td></td>
+                            <th></th>
+                            <th></th>
                           </tr>
                           </thead>
                           <tbody>
@@ -29,88 +30,13 @@
                             <td><%= customer.ContactNumber %></td>
                             <td><%= customer.EmailAddress %></td>
                             <td class="display select">
-                            
-                           
-                         
-                                <div>
-                  <%= link_to "Edit", edit_customer_path(customer),class: "btn btn-warning center-block"%>       
-           
-            
-              <div class="modal fade" id="editmodal" tabIndex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h1 style="text-align: center;">Update</h1>
-                    </div>
-                    <div class="modal-body">
-                      <div class="container-fluid">
-                     
-                     <form class="form-horizontal" role="form">
-                        <%= bootstrap_form_for customer,{method: :put} do |f|%>
-                        <div class="form-group">
-                          <label class="control-label">ID:</label>
-                       
-                            <p class="form-control-static"></p><!--Customerid-->
-                         
-                        </div>
-                        <div class="form-group">
-                          
-                          <div class="">          
-                            <%= f.text_field :CustomerName, label:"Company Name:", label_class: "control-label"%>
-                          </div>
-                        </div>
-                          <div class="form-group">
-                           
-                            <%= f.text_field :MailingAddress, label:"Company Location:" ,label_class: "control-label"%>
-                          </div>
-                          <div class="form-group">
-                           
-                            <%= f.text_field :ContactPerson, label:"Contact Person:", label_class: "control-label"%>
-                          </div>
-                          <div class="form-group">
-                           
-                            <%= f.text_field :ContactNumber, label:"Contact Number:", label_class: "control-label"%>
-                          </div>
-                          <div class="form-group">
-                          
-                            <%= f.text_field :EmailAddress, label:"Email Address:", label_class: "control-label"%>
-                            
-                          </div>
-      <div class="modal-footer">
-                      <div class="form-group">        
-                          <div class="col-sm-offset-2 col-sm-10">
-                             <%= f.submit "Submit", class: "btn btn-success"%>
-                            <%end%>
-                                </div>
-                        </div>
-                    </div>
-                      </form>
-            </div>
-
-    </div>
-   
-        <!-- TABLE END -->
-   
-                  
-                    
-                  </div>
-                </div>
-              </div>
-          </div>
-                            
+                            <%= link_to "Edit", edit_customer_path(customer),class: "btn btn-warning center-block"%>   
                             </td>
                             <td class="display select">
-            <%= button_to "Delete",customer, method: :delete, class: "btn btn-danger"%>
-    </div>
-                  </div>
-                </div>
-                <%end%>
-              </div>
-          </div>
+                            <%= button_to "Delete",customer, method: :delete, class: "btn btn-danger"%>
                             </td>
-                            
+                 <!-- TABLE END -->
+                           <%end%>
                           </tr>
 
                           </tbody>
@@ -118,10 +44,9 @@
                       
                         </table>
 
-              </div>
-
     <div class="panel-footer">
     <!--ADD NEW CUSTOMER -->
+
           <div class="col-md-4 col-sm-4 col-xs-12">
             <a class="btn btn-primary center-block" data-toggle="modal" data-target="#mymodal">Add New Customer</a>
               <div class="modal fade" id="mymodal" tabIndex="-1" role="dialog" aria-hidden="true">
@@ -137,46 +62,34 @@
                      
                       <form class="form-horizontal" role="form">
                         <%= bootstrap_form_for @customer do |f|%>
-                        <div class="form-group">
-                          <label class="control-label">ID:</label>
-                       
-                            <p class="form-control-static"><</p><!--Customerid-->
-                         
-                        </div>
-                        <div class="form-group">
-                          
+                        
+                        <div class="form-group"
                           <div class="">          
                             <%= f.text_field :CustomerName, label:"Company Name:", label_class: "control-label"%>
+                          
                           </div>
-                        </div>
                           <div class="form-group">
-                           
                             <%= f.text_field :MailingAddress, label:"Company Location:" ,label_class: "control-label"%>
                           </div>
                           <div class="form-group">
-                           
                             <%= f.text_field :ContactPerson, label:"Contact Person:", label_class: "control-label"%>
                           </div>
                           <div class="form-group">
-                           
                             <%= f.text_field :ContactNumber, label:"Contact Number:", label_class: "control-label"%>
                           </div>
                           <div class="form-group">
-                          
                             <%= f.text_field :EmailAddress, label:"Email Address:", label_class: "control-label"%>
-                            
                           </div>
-      <div class="modal-footer">
-                      <div class="form-group">        
-                          <div class="col-sm-offset-2 col-sm-10">
+                          <div class="modal-footer">
+                            <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
                              <%= f.submit "Submit", class: "btn btn-success"%>
-                            <%end%>
-                                </div>
-                        </div>
+                              <%end%>
+                          </div>
+                      </div>
                     </div>
-                      </form>
+               </form>
             </div>
-
     </div>
   
         <!-- TABLE END -->
@@ -193,10 +106,9 @@
           </div>
            
         <!-- -->
-        </div>
-          
+          </div>
          </div>
       </div>
     </div>
   </div>
-</div>
+
