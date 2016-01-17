@@ -24,13 +24,13 @@
                           <% @customers.all.each do |customer|%>
                           <tr>
                            
-                            <td><%= link_to customer.CustomerName, edit_customer_path(customer) %></td>
+                            <td><%= customer.CustomerName%></td>
                             <td><%= customer.MailingAddress %></td>
                             <td><%= customer.ContactPerson %></td>
                             <td><%= customer.ContactNumber %></td>
                             <td><%= customer.EmailAddress %></td>
                             <td class="display select">
-                            <%=  link_to "Edit", edit_customer_path(customer),class: "btn btn-warning center-block"%>   
+                            <%=  link_to "View",customer,class: "btn btn-info center-block"%>   
                             </td>
                             <td class="display select">
                             <%= button_to "Delete",customer, method: :delete, class: "btn btn-danger"%>

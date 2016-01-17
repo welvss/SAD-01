@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-	before_action :get_customer, only: [:edit, :update, :destroy]
+	before_action :get_customer, only: [:edit, :update, :destroy, :show]
 	def get_customer
 		@customer = Customer.find(params[:id])
 		
@@ -8,9 +8,8 @@ class CustomersController < ApplicationController
 
 	def show
 		
-		respond_to do |format|
-			format.html
-		end
+		
+		
 	end
 
 
@@ -31,15 +30,17 @@ class CustomersController < ApplicationController
 	
 	def update
 		 @customer.update_attributes(customer_params)
-		
-	
-		redirect_to customers_path
+		if @customer.save
+		 @count = nil
+		 redirect_to customers_path
+		end
 		
 	end
 
 
 	def edit
-		 
+		  
+	 
 	end
 
 

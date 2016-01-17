@@ -1,5 +1,5 @@
 class SuppliersController < ApplicationController
-	before_action :get_supplier, only: [:edit, :update, :destroy]
+	before_action :get_supplier, only: [:edit, :update, :destroy, :show]
 	def get_supplier
 		@supplier = Supplier.find(params[:id])
 		
@@ -7,9 +7,7 @@ class SuppliersController < ApplicationController
 
 
 	def show
-		respond_to do |format|
-			format.html
-		end
+		
 	end
 
 

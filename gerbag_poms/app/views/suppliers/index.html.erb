@@ -21,16 +21,16 @@
                           </tr>
                           </thead>
                           <tbody>
-                          <% @suppliers.all.each do |supplier|%>
+                          <% @suppliers.each do |supplier|%>
                           <tr>
                            
-                            <td><%= link_to supplier.SupplierName, edit_supplier_path(supplier) %></td>
+                            <td><%= supplier.SupplierName %></td>
                             <td><%=supplier.MailingAddress %></td>
                             <td><%= supplier.ContactPerson %></td>
                             <td><%= supplier.ContactNumber %></td>
                             <td><%= supplier.EmailAddress %></td>
                             <td class="display select">
-                            <%=  link_to "Edit", edit_supplier_path(supplier),class: "btn btn-warning center-block"%>   
+                            <%=  link_to "View",supplier,class: "btn btn-info center-block"%>   
                             </td>
                             <td class="display select">
                             <%= button_to "Delete",supplier, method: :delete, class: "btn btn-danger"%>
