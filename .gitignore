@@ -9,3 +9,4 @@ gerbag_poms/tmp/cache/assets/development/sprockets/d771ace226fc8215a3572e0aa35bb
 gerbag_poms/tmp/cache/assets/development/sprockets/d24790e8fdadc8cc335aa220cdc8d914
 gerbag_poms/tmp/cache/assets/development/sprockets/13fe41fee1fe35b49d145bcc06610705
 *.log
+*.pid
