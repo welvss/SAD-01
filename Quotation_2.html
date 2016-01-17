@@ -4,27 +4,18 @@
 <meta charset="UTF-8">   
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width = device-width, initial scale = 1">
-<title>Quotation-Gerbag</title>   
+<title>Quotation_2-Gerbag</title>   
 <!--
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
 <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-
-
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-
-<script type="text/javascript" src="js/dataTables.select..min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/customerpage.css">
 <link rel="stylesheet" type="text/css" href="css/buttons.bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/select.bootstrap.min.css">
-
-
-<script type="text/javascript" src="js/buttons.print.min.js"></script>
-
-
+<script type="text/javascript" src="js/Quotation_2.js"></script>
 </head>  
 <body>  
 <!--Navigation-->
@@ -88,7 +79,7 @@
             <ul class="list-group">
               <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="CustomerPage.html">Clients</a></li>
 
-              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="#">Quotation</a></li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="quotationmain.html">Quotation</a></li>
 
               <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Invoice</a></li>
         
@@ -143,112 +134,129 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 col-md-10 col-xs-12" style="height: 100%; ">
+    <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Quotation</h3>
         </div>
           <div class="panel-body" style="height: 100%; ">
-            <div class="col-md-10 col-sm-4 col-xs-12">
-              <div class="form-group col-md-8">
-                <label for="sel1">Customer:</label>
-                <select class="form-control" id="sel1">
-                  <option>Choose Customer</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </select>
-            </div>
-                <!-- add-->
-                 <div class="col-md-6">
-            <a class="btn btn-primary center-block" data-toggle="modal" data-target="#mymodal">Add New Customer</a>
-              <div class="modal fade" id="mymodal" tabIndex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h1 style="text-align: center;">Add New Customer</h1>
-                    </div>
-                    <div class="modal-body">
-                      <div class="container-fluid">
-                     
-                      <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                          <label class="control-label">Account #:</label>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-danger">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Quotation Header</h3>
+                </div>
+                <div class="panel-body">
+                  <div >
+                
+                <div class="form-group ">
+                  <label class="control-label" name"Quotation#">Quotation #</label>
+                  <input class="form-control" id="Quotation#" type="text" value="GITP 420"/>
+                </div>
+               <!-- -->
+                
+               <!-- -->
+                </div>
                        
-                            <p class="form-control-static">A63NTX44</p><!--Customerid-->
-                         
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label  ">Company Name:</label>
-                          <div class="">          
-                            <input type="text" class="form-control">
-                          </div>
-                        </div>
-                          <div class="form-group">
-                            <label class="control-label">Company Location:</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label">Contact Person:</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label">Contact Number</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label">Email Address</label>
-                            <input type="text" class="form-control">
-                          </div>
-
-                        
-                      </form>
-            </div>
-
-    </div>
-   
-                    <div class="modal-footer">
-                      <div class="form-group">        
-                          <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                          </div>
-                        </div>
-                    </div>
+                  
                     
                   </div>
                 </div>
               </div>
-          </div>
-                          <!-- add customer-->
-                          <!--Currency-->
-                  <div class="form-group col-md-8">
-                    <label for="sel1">Currency:</label>
-                    <select class="form-control" id="sel1">
-                      <option>Choose Currency:</option>
-                      <option>Singapore Dollar</option>
-                      <option>Philippine Peso</option>
-                    </select>
-                  </div>
-                          <!-- -->
-                        <div class="panel panel-default col-md-6">
+              <div class="col-md-6">
+                          <div class="panel panel-info">
                             <div class="panel-heading">
-                            <h3 class="panel-title">Quote Header</h3>
-                              <div class="panel-body">
-                                <div class="input-group">
-                                  <span class="input-group-addon" id="basic-addon1">Quote #</span>
-                                  <input type="text" class="form-control" placeholder="GITP 16-420" aria-describedby="basic-addon1">
-                                </div>
-
-                              </div>
+                              <h3 class="panel-title">Customer Information</h3>
                             </div>
+                            <div class="panel-body">
+                           
+                               <div class="form-group text-center">
+                          <label class="control-label">Company Name:</label>
+                       
+                            <p class="form-control-static">Heaven's Door</p>
+                         
+                              </div>
+                               <div class="form-group text-center">
+                          <label class="control-label">Mailing Address:</label>
+                       
+                            <p class="form-control-static">Makati</p>
+                         
+                              </div>
+                      
+                            </div>
+                          </div>
                         </div>
-                      <!---->
+            </div>
+                        
+                        </div>
+                        <!-- Table addrow -->
 
+                     <div class="container-fluid col-md-12">
+    <div class="row clearfix">
+    <div class="col-md-12 table-responsive column">
+      <table class="table table-bordered table-hover table-condensed" id="tab_logic">
+        <thead>
+          <tr >
+            <th class="text-center">
+              No.
+            </th>
+            <th class="text-center">
+              Item Description
+            </th>
+            <th class="text-center">
+             Qty
+            </th>
+            <th class="text-center">
+              Unit
+            </th>
+            <th class="text-center">
+              Unit Price
+            </th>
+            <th class="text-center">Total Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id='addr0'>
+            <td>
+            1
+            </td>
+            <td>
+            <input type="text" name='item_des0'  placeholder='Item Description' class="form-control"/>
+            </td>
+            <td>
+            <input type="number" name='Qty0' placeholder='Qty' class="form-control"/>
+            </td>
+            <td>
+            <input type="text" name='Unit0' placeholder='Unit' class="form-control"/>
+            </td>
+            <td>
+              <input type="text"  name='Unitprice0' placeholder='Unit Price' class="form-control"/>
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+                    <tr id='addr1'></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <a id="add_row" class="btn btn-primary pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-danger">Delete Row</a>
+</div>
+                        <!-- End Table addrow -->
+                        <div class="container-fluid">
+                       <div class="form-group" style="padding-top 5px;">
+                          <label for="comment">Customer visible notes</label>
+                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                      </div>
               </div>
-              </div>
+              <div class="panel-footer">
+              <a class="btn btn-info center" href="Quotation_1.html">Back</a>
+                        <a class="btn btn-success" href="Quotationmain.html">Save</a>
+                      </div>
           </div>
+           
       </div>
     </div>
           
