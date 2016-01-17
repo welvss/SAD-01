@@ -4,7 +4,7 @@
 <meta charset="UTF-8">   
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width = device-width, initial scale = 1">
-<title>EditAddress-Gerbag</title>   
+<title>ViewQuotation-Gerbag</title>   
 <!--
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
 <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
@@ -21,9 +21,9 @@
 <link rel="stylesheet" type="text/css" href="css/customerpage.css">
 <link rel="stylesheet" type="text/css" href="css/buttons.bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/select.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/viewquotation.css">
+<script type="text/javascript" src="js/print.js"></script>
 
-<script type="text/javascript" src="js/customerpage.js"></script>
-<script type="text/javascript" src="js/buttons.print.min.js"></script>
 
 
 </head>  
@@ -147,32 +147,80 @@
     <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title text-center">Customer's Information</h3>
+          <h3 class="panel-title text-center">Quotation</h3>
         </div>
         <div class="panel-body" style="height: 100%; ">
-          <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h3 class="panel-title text-center">Edit Address</h3>
-                      </div>
-                      <div class="panel-body">
-                          <form class="form-horizontal" role "form">
-                            <div class="form-group">
-                              <label class="control-label col-sm-2" for="Mailingaddress">Mailing Address: </label>
-                                <div class="col-sm-10">
-                                  <input type="text"class="form-control-static" value="Makati">
-                                </div>
-                            </div>
-                            
-                          </form>
-                          
-                          <div class="col-md-4 col-md-offset-4">
-                                  <a class="btn btn-success center-block" href="viewcustomer.html">Save</a>
-                               </div>
-                      </div>
+        <!-- Print-->
+        
+          <div id="div1">
+          <div>
 
-                  </div>
+          <h1 class="text-center"> Gerbag Industrial Technologies, Philippines</h1>
+          <h2 class="text-center">FABRICATOR - AUTOMATION - CONTRACTOR - DESIGNER - ESTIMATOR </h2><br>
+          </div>
+          <p class="pull-right">GITP-2016</p>
+          <p>January 17, 2016</p><br><br>
+
+          <p>Attention to:          Ms. Customer </p>
+          <p>Subject: RFQ for 420</p><br><br>
+          <p>Dear Ma'am:</p> <p class="sub"> We are pleased to present to you our offer for the following:</p>
+          <p class="roman">I. Item Description</p>
+          <div class="-fluid">        
+  <table class="table table-bordered table-condensed table-responsive">
+    <thead>
+      <tr>
+      <th>No.</th>
+        <th>Item Description</th>
+        <th>Qty</th>
+        <th>Unit</th>
+        <th>Unit Price</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+      <td>2</td>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+      <td>3</td>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+        <th></th>
+        <th></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="roman">II. Completion: 15 days</p>
+<p class="roman">III. Terms of Payment: 30 days</p>
+<p class="roman"> IV. Validity: 1 week</p>
+<p>For questions or inquiry, just contact us any time. Thank you very much for giving us opportunity to serve you.</p>
+<p>Very truly yours,</p>
+<p class=" roman pull-left">William T. Canoy</p><br>
+<p class="roman pull-right">Grand Master Gerbag</p>
+<iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+</div>
+            
         </div>
-        <div class="panel-footer"></div>
+        <!-- -->
+        <div class="panel-footer">
+          <a class="btn btn-success"href="javascript:printDiv('div1')">Print</a>
+          <a class="btn btn-warning" href="Quotation_1.html">Edit</a>
+        </div>
       </div>
     </div>
 </div>
@@ -182,5 +230,8 @@
       </footer>
   </div>
 <!--end of sidebar-->
+<script>
+ 
+</script>
 </body>  
 </html>  
