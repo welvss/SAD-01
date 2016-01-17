@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/customerpage.css">
 <link rel="stylesheet" type="text/css" href="css/buttons.bootstrap.css">
-<script type="text/javascript" src="js/Quotation_2.js"></script>
+<script type="text/javascript" src="js/Purchase_2.js"></script>
 </head>  
 <body>  
 <!--Navigation-->
@@ -284,13 +284,17 @@
             <input type="text" name='item_des0'  placeholder='Item Description' class="form-control"/>
             </td>
             <td>
-            <input type="number" name='Qty0' placeholder='Qty' class="form-control"/>
+            <input id ="box1"type="number" name='Qty0' placeholder='Qty' class="form-control" oninput="calculate()" />
             </td>
             <td>
             <input type="text" name='Unit0' placeholder='Unit' class="form-control"/>
             </td>
             <td>
-              <input type="text"  name='Unitprice0' placeholder='Unit Price' class="form-control"/>
+              <input id="box2" type="text"  name='Unitprice0' placeholder='Unit Price' class="form-control" oninput="calculate()"/>
+            </td>
+            <td>
+           <input id="result" type="text" name="Totalprice0" class="form-control" />
+
             </td>
             <td>
             
@@ -327,6 +331,8 @@
       </footer>
   </div>
 <!--end of sidebar-->
-
+<script>
+ 
+</script>
 </body>  
 </html>  
