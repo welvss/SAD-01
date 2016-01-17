@@ -4,27 +4,18 @@
 <meta charset="UTF-8">   
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width = device-width, initial scale = 1">
-<title>Quotation_1-Gerbag</title>   
+<title>Purchase_2-Gerbag</title>   
 <!--
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
 <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-
-
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-
-<script type="text/javascript" src="js/dataTables.select..min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/customerpage.css">
 <link rel="stylesheet" type="text/css" href="css/buttons.bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/select.bootstrap.min.css">
-
-
-<script type="text/javascript" src="js/buttons.print.min.js"></script>
-
-
+<script type="text/javascript" src="js/Quotation_2.js"></script>
 </head>  
 <body>  
 <!--Navigation-->
@@ -107,7 +98,7 @@
           </div>
           <div id="collapseFour" class="panel-collapse collapse">
             <div class="list-group">
-            <a href="supplierlist.html" class="list-group-item">Supplier List</a>
+             <a href="supplierlist.html" class="list-group-item">Supplier List</a>
               <a href="purchase.html" class="list-group-item">Purchase</a>
             </div>
           </div>
@@ -145,20 +136,43 @@
     <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title">Quotation</h3>
+          <h3 class="panel-title">Purchase</h3>
         </div>
           <div class="panel-body" style="height: 100%; ">
-            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-              <div class="panel panel-default">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-danger">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Customer's Information</h3>
+                  <h3 class="panel-title">Order Information</h3>
+                </div>
+                <div class="panel-body">
+                  <div >
+                
+                <div class="form-group ">
+                  <label class="control-label" name"Purchase#">Purchase Order #</label>
+                  <input class="form-control" id="Purchase#" type="text" value="16-420"/>
+                </div>
+               <!-- -->
+                
+               <!-- -->
+                </div>
+                       
+                  
+                    
+                  </div>
+                </div>
+              </div>
+             <div class="col-md-6">
+                          <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Supplier Information</h3>
                 </div>
                 <div class="panel-body">
                   <div class="col-md-10 col-md-offset-2 col-xs-12">
                   <div class="form-group col-md-8">
-                <label for="Customer">Customer:</label>
-                <select class="form-control" id="Customer">
-                  <option>Choose Customer</option>
+                <label for="Supplier">Supplier:</label>
+                <select class="form-control" id="Supplier">
+                  <option>Choose Supplier</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
@@ -166,14 +180,14 @@
             </div>
                 <!-- add-->
                  <div class="col-md-8">
-            <a class="btn btn-primary center-block" data-toggle="modal" data-target="#mymodal">Add Customer</a>
+            <a class="btn btn-primary center-block" data-toggle="modal" data-target="#mymodal">Add Supplier</a>
               <div class="modal fade" id="mymodal" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
 
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h1 style="text-align: center;">Add New Customer</h1>
+                      <h1 style="text-align: center;">Add New Supplier</h1>
                     </div>
                     <div class="modal-body">
                       <div class="container-fluid">
@@ -228,39 +242,75 @@
           </div>
                           <!-- add customer-->
                           <!--Currency-->
-                  <div class="form-group col-md-8">
-                    <label for="sel1">Currency:</label>
-                    <select class="form-control" id="sel1">
-                      <option>Choose Currency:</option>
-                      <option>Singapore Dollar</option>
-                      <option>Philippine Peso</option>
-                    </select>
-                  </div>
                     
                   </div>
                 </div>
               </div>
-                          <!-- -->
-                        <div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">Mailing Address</h3>
-                            </div>
-                            <div class="panel-body">
-                              afasfsd
-                            </div>
-                          </div>
+              </div>
+                        
                         </div>
-                      <!---->
-                     
-              </div>
+                        <!-- Table addrow -->
 
-              </div>
-              <div class="panel-footer">
-              <a class="btn btn-info center" href="Quotationmain.html">Back</a>
-                        <a class="btn btn-success" href="Quotation_2.html">Next</a>
-
+                     <div class="container-fluid col-md-12">
+    <div class="row clearfix">
+    <div class="col-md-12 table-responsive column">
+      <table class="table table-bordered table-hover table-condensed" id="tab_logic">
+        <thead>
+          <tr >
+            <th class="text-center">
+              No.
+            </th>
+            <th class="text-center">
+              Item Description
+            </th>
+            <th class="text-center">
+             Qty
+            </th>
+            <th class="text-center">
+              Unit
+            </th>
+            <th class="text-center">
+              Unit Price
+            </th>
+            <th class="text-center">Total Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id='addr0'>
+            <td>
+            1
+            </td>
+            <td>
+            <input type="text" name='item_des0'  placeholder='Item Description' class="form-control"/>
+            </td>
+            <td>
+            <input type="number" name='Qty0' placeholder='Qty' class="form-control"/>
+            </td>
+            <td>
+            <input type="text" name='Unit0' placeholder='Unit' class="form-control"/>
+            </td>
+            <td>
+              <input type="text"  name='Unitprice0' placeholder='Unit Price' class="form-control"/>
+            </td>
+            <td>
+            
+            </td>
+          </tr>
+                    <tr id='addr1'></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <a id="add_row" class="btn btn-primary pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-danger">Delete Row</a>
+</div>
+                        <!-- End Table addrow -->
+                        
+                       <div class="panel-footer">
+              <a class="btn btn-info center" href="Purchase_1.html">Back</a>
+                        <a class="btn btn-success" href="purchase.html">Save</a>
                       </div>
+              </div>
+             
           </div>
            
       </div>

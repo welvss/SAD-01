@@ -4,7 +4,7 @@
 <meta charset="UTF-8">   
 <meta http-equiv="X-UA-Compatible" content="IE-edge">
 <meta name="viewport" content="width = device-width, initial scale = 1">
-<title>EditAddress-Gerbag</title>   
+<title>ViewSupplier-Gerbag</title>   
 <!--
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
 <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
@@ -93,7 +93,7 @@
 
               <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Invoice</a></li>
         
-         <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Sales</a></li>
+         <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="purchase.html">Sales</a></li>
              
 
             </ul>
@@ -109,7 +109,7 @@
           <div id="collapseFour" class="panel-collapse collapse">
             <div class="list-group">
               <a href="supplierlist.html" class="list-group-item">Supplier List</a>
-              <a href="purchase.html" class="list-group-item">Purchase</a>
+              <a href="#" class="list-group-item">Purchase</a>
             </div>
           </div>
         </div>
@@ -146,30 +146,115 @@
     <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title text-center">Customer's Information</h3>
+          <h3 class="panel-title text-center">Supplier's Information</h3>
         </div>
         <div class="panel-body" style="height: 100%; ">
-          <div class="panel panel-default">
+             <!--Nested Panel-->
+
+              <div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title text-center"> Supplier</h3>
+                  </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" role"form">
+                          <div class="form-group">
+                              <label class="control-label col-sm-2" for="Account">Account #:</label>
+                              <div class="col-sm-10">
+                                  <p class="form-control-static">1</p>
+                              </div>
+                          </div>
+                          
+                        </form>
+                        <form class="form-horizontal" role"form">
+                          <div class="form-group">
+                              <label class="control-label col-sm-2" for="CompanyName">Company Name:</label>
+                              <div class="col-sm-10">
+                                  <p class="form-control-static">Heaven's Door</p>
+                              </div>
+                          </div>
+                          
+                        </form>
+                        <div class="col-md-4 col-md-offset-4">
+                                  <a class="btn btn-warning center-block" href="editsupplier.html">Edit</a>
+                               </div>
+                    </div>
+                                
+                </div>
+                      
+              </div>
+                <div>
+                  <div class="panel panel-default">
                       <div class="panel-heading">
-                        <h3 class="panel-title text-center">Edit Address</h3>
+                        <h3 class="panel-title text-center">Contact</h3>
                       </div>
                       <div class="panel-body">
                           <form class="form-horizontal" role "form">
                             <div class="form-group">
-                              <label class="control-label col-sm-2" for="Mailingaddress">Mailing Address: </label>
+                              <label class="control-label col-sm-2" for="Contactperson">Contact Person: </label>
                                 <div class="col-sm-10">
-                                  <input type="text"class="form-control-static" value="Makati">
+                                  <p class="form-control-static">Mylene Ramirez</p>
                                 </div>
                             </div>
                             
                           </form>
-                          
-                          <div class="col-md-4 col-md-offset-4">
-                                  <a class="btn btn-success center-block" href="viewcustomer.html">Save</a>
+                          <form class="form-horizontal" role "form">
+                            <div class="form-group">
+                              <label class="control-label col-sm-2" for="Contactnumber">Contact Number: </label>
+                                <div class="col-sm-10">
+                                  <p class="form-control-static">0844 493 0787</p>
+                                </div>
+                            </div>
+                            
+                          </form>
+                           <form class="form-horizontal" role "form">
+                            <div class="form-group">
+                              <label class="control-label col-sm-2" for="Email">Email Address: </label>
+                                <div class="col-sm-10">
+                                  <p class="form-control-static">Mylene@yahoo.com</p>
+                                </div>
+                            </div>
+                            
+                          </form>
+                          <div class="col-md-3 col-md-offset-3">
+                                  <a class="btn btn-primary center-block" href="addcontact_supplier.html">Add</a>
+                               </div>
+                          <div class="col-md-3">
+                                  <a class="btn btn-warning center-block" href="editcontact_supplier.html">Edit</a>
                                </div>
                       </div>
 
                   </div>
+                  <div>
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title text-center">Addresses</h3>
+                    </div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role "form">
+                            <div class="form-group">
+                              <label class="control-label col-sm-2" for="Maiiladdress">Mailing Address: </label>
+                                <div class="col-sm-10">
+                                  <p class="form-control-static">Makati</p>
+                                </div>
+                            </div>
+                            
+                          </form>
+                         <div class="col-md-3 col-md-offset-3">
+                                  <a class="btn btn-primary center-block" href="addaddress_supplier.html">Add</a>
+                               </div>
+                          <div class="col-md-3">
+                                  <a class="btn btn-warning center-block" href="editaddress_supplier.html">Edit</a>
+                               </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+            <!-- -->
+            <!-- Nested Panel -- >
+                  
+            <!-- -->
         </div>
         <div class="panel-footer"></div>
       </div>
