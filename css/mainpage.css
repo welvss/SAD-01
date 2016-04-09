@@ -1,15 +1,17 @@
 html, body {
   height: 100%;
 }
-body { padding-top: 100px; }
+body { padding-top: 100px; 
+background: }
 #logo{
   height: 100px;
 }
 .panel-body {
     padding: 15px;
 }
-.jumbotron{
-  color: white;
-  background: green;
-
+.navbar{
+	height: 44px;
+}
+.sidebar{
+	background: red;
 }
