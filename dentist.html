@@ -1,0 +1,214 @@
+<!DOCTYPE html>   
+<html lass="no-js" lang="en">   
+<head>   
+<meta charset="UTF-8">   
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width = device-width, initial scale = 1">
+<title>Customer-Gerbag</title>   
+<!--
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"></style>
+<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css"></style>
+
+
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="js/dataTables.select..min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/customerpage.css">
+<link rel="stylesheet" type="text/css" href="css/buttons.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/select.bootstrap.min.css">
+
+<script type="text/javascript" src="js/customerpage.js"></script>
+<script type="text/javascript" src="js/buttons.print.min.js"></script>
+
+
+</head>  
+<body>  
+<!--Navigation-->
+      <nav class="navbar navbar-fixed-top" style="background: #20272f; height: 44px;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <a class="navbar-brand" href="#" style="">
+        <img src="images/apple.png" alt="HJM" style="height: 44px; width:44px; position:relative; bottom: 10px; ">
+      </a>
+    </div>
+    <h4 style="color: #ecf0f1; position:relative; top: 7px;">HJM Dental Laboratory</h4>
+  </div><!-- /.container-fluid -->
+</nav>
+        
+      </div>
+      
+<!--End of Navigation-->
+
+<!--sidebar-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2 col-md-2 sidebar">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-secondary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                </span>Customer</a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-secondary"></span><a href="CustomerPage.html">Clients</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-secondary"></span><a href="quotationmain.html">Quotation</a></li>
+
+              <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="#">Invoice</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-secondary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFour"><span class="glyphicon glyphicon-file">
+                </span>Supplier</a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="list-group">
+               <a href="supplierlist.html" class="list-group-item">Supplier List</a>
+              <a href="purchase.html" class="list-group-item">Purchase</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-secondary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapseFive"><span class="glyphicon glyphicon-heart">
+                </span>Reports</a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapse">
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">List group item heading</h4>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-10 col-xs-12" style="height: 100%; ">
+    
+      <div class="panel panel-secondary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Manage your Customers</h3>
+        </div>
+        <div class="panel-body" style="height: 100%; ">
+        	<!--Dentist Form-->
+			 <div class="row">
+     	<div class="col-sm-8">
+     		<div class="row">
+     			<div class="col-sm-6">
+     					<form role="form">
+		  <div class="form-group">
+			<label for="">Code:</label>
+			<input type="email" class="form-control" id="email">
+		  </div>
+		  <div class="form-group">
+			<label for="">Patient:</label>
+			<input type="text" class="form-control" id="pwd">
+		  </div>
+		  <div class="form-group">
+			<label for="">Time:</label>
+			<input type="time" class="form-control" id="pwd">
+		  </div>
+		  <div class="form-group">
+			<label for="">Date:</label>
+			<input type="date" class="form-control" id="pwd">
+		  </div>
+		   <div class="form-group">
+			<label for="">Status:</label>
+			<input type="email" class="form-control" id="email">
+		  </div>
+		   <div class="form-group">
+			<label for="">Case:</label>
+			<input type="email" class="form-control" id="email">
+		  </div>
+        	<!--Col6-->
+     	</div>
+    			<div class="col-sm-6">
+    					<div class="form-group">
+		  		<label>Description
+		  		<input type="text"></label>
+		  	</div>
+		  	<div class="form-group">
+		  		<label>Due Date
+		  		<input type="date"></label>
+		  	</div>
+		  	<div class="form-group">
+		  		<label>Due Time
+		  		<input type="time"></label>
+		  	</div>
+		  		<div class="form-group">
+		  		<label>Remarks
+		  		<input type="text"></label>
+		  	</div>
+		  <div class="checkbox">
+			<label><input type="checkbox">Porcelain</label>
+		  </div>
+		   <div class="checkbox">
+			<label><input type="checkbox">Bite wax</label>
+		  </div>
+		   <div class="checkbox">
+			<label><input type="checkbox">Shade Guide</label>
+		  </div>
+		   <div class="checkbox">
+			<label><input type="checkbox">Articulator</label>
+		  </div>
+		</form>
+        	<!--end-->
+        	<a href="#">Attachment</a>
+        	<img src="#" alt="brand" style="height: 150px; width: 250px; margin-top: 25px;">
+    			</div>
+    			<!--rowend-->
+     			</div>
+     		</div>
+     	
+     	<div class="col-md-4">
+     	<label for="">Dentist
+     			<select>
+				  <option value="volvo">Volvo</option>
+				  <option value="saab">Saab</option>
+				  <option value="mercedes">Mercedes</option>
+				  <option value="audi">Audi</option>
+				</select>
+     	</label>
+     	
+     	</div>
+     </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<footer>
+        <p>Gerbag Industrial Technologies 2016 (c)</p>
+      </footer>
+  </div>
+<!--end of sidebar-->
+</body>  
+</html>  
